@@ -12,9 +12,12 @@
   "dependencies": {
     "@ston-fi/api": "^0.20.0",
     "@ston-fi/sdk": "^2.2.3",
+    "@tailwindcss/vite": "^4.0.11",
     "@tonconnect/ui-react": "^2.0.11",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "tailwindcss": "^4.0.11",
+    "vite-plugin-node-polyfills": "^0.23.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
