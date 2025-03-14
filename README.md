@@ -72,7 +72,7 @@ Preview on Replit:
 
 If you prefer not to run the app locally, you can quickly preview or fork it on Replit:
 
-1. Go to **[Replit STON.fi Swap App](https://replit.com/@durbas/stonfi-swap-app?embed=true)**
+1. Go to **[Replit STON.fi Swap App](https://replit.com/@stonfi/stonfi-swap-app?embed=true)**
 2. Click Fork (top-right corner) to create your own copy of the project.
 3. Wait for the environment to install dependencies.
 4. Click the Run button to start the dev server.
