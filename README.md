@@ -1,9 +1,3 @@
-Below is an example of how you might update the README (the “React + Vite” template text) so that it points users to the correct files in your swap guide (e.g., App.tsx) and includes instructions for previewing/forking on Replit.
-
-⸻
-
-
-
 # STON.fi Swap App
 
 This project is a minimal **React + Vite** setup that demonstrates how to implement a token swap using the [STON.fi SDK and API](https://ston.fi/) on the [TON blockchain](https://ton.org/). It connects with a TON wallet using [TonConnect](https://ton.org/docs/), simulates swaps, and then executes on-chain transactions.
@@ -53,27 +47,28 @@ The most relevant files for the swap demo are:
 ## Running Locally
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-user/stonfi-swap-app.git
-   cd stonfi-swap-app
-   ```
 
-	2.	Install dependencies (using pnpm, npm, or yarn):
-
-   ```bash
-pnpm install
+```bash
+  git clone https://github.com/your-user/stonfi-swap-app.git
+  cd stonfi-swap-app
 ```
 
-	3.	Start the development server:
-   ```bash
-pnpm dev
+2.Install dependencies (using pnpm, npm, or yarn):
+
+```bash
+  pnpm install
 ```
 
-	4.	Open http://localhost:5173 in your browser to see the swap app in action.
+3.Start the development server:
+```bash
+  pnpm dev
+```
 
-⸻
+4.Open http://localhost:5173 in your browser to see the swap app in action.
 
-Preview on Replit
+---
+
+Preview on Replit:
 
 If you prefer not to run the app locally, you can quickly preview or fork it on Replit:
 	1.	Go to **[Replit STON.fi Swap App](https://replit.com/@durbas/stonfi-swap-app?embed=true)**
@@ -84,7 +79,7 @@ If you prefer not to run the app locally, you can quickly preview or fork it on 
 
 You can then modify any files (like App.tsx) directly in Replit and immediately see the changes reflected in the preview.
 
-⸻
+---
 
 Happy building on TON and STON.fi!
 
