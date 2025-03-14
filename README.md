@@ -71,11 +71,12 @@ The most relevant files for the swap demo are:
 Preview on Replit:
 
 If you prefer not to run the app locally, you can quickly preview or fork it on Replit:
-	1.	Go to **[Replit STON.fi Swap App](https://replit.com/@durbas/stonfi-swap-app?embed=true)**
-	2.	Click Fork (top-right corner) to create your own copy of the project.
-	3.	Wait for the environment to install dependencies.
-	4.	Click the Run button to start the dev server.
-	5.	Use the Replit preview to interact with the swap UI.
+
+1. Go to **[Replit STON.fi Swap App](https://replit.com/@durbas/stonfi-swap-app?embed=true)**
+2. Click Fork (top-right corner) to create your own copy of the project.
+3. Wait for the environment to install dependencies.
+4. Click the Run button to start the dev server.
+5. Use the Replit preview to interact with the swap UI.
 
 You can then modify any files (like App.tsx) directly in Replit and immediately see the changes reflected in the preview.
 
