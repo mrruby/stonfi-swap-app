@@ -29,16 +29,13 @@ function App() {
 
   // Helper to find an asset by address and return a consistent object
   const getAssetInfo = (asset) => {
-    if (!asset) return { symbol: 'token', decimals: 1e9 };
+    if (!asset) return { symbol: 'token', decimals: 10 ** 9 };
 
     // Determine display symbol
     const symbol = asset.meta?.symbol || asset.meta?.displayName || 'token';
 
-    // Determine decimals
-    let decimals = 1e9;
-    if (asset.kind === 'Jetton') {
-      decimals = asset.meta?.decimals ? 10 ** asset.meta.decimals : 1e6;
-    }
+    // Always take the decimal property from metadata, fallback to 9 if missing
+    const decimals = 10 ** (asset.meta?.decimals ?? 9);
 
     return { symbol, decimals };
   };
@@ -72,11 +69,15 @@ function App() {
       const { decimals: fromDecimals } = getAssetInfo(fromAsset);
       const client = new StonApiClient();
 
+      // Convert user-facing amount (e.g. 10.5) to blockchain units (e.g. 10500000000)
+      // by multiplying by token decimals and converting to string for the API
+      const offerUnits = (Number(amount) * fromDecimals).toString();
+      
       const result = await client.simulateSwap({
         offerAddress: fromAsset.contractAddress,
         askAddress: toAsset.contractAddress,
         slippageTolerance: '0.01',
-        offerUnits: BigInt(Math.floor(Number(amount) * fromDecimals)).toString(),
+        offerUnits,
       });
       setSimulationResult(result);
     } catch (err) {
@@ -164,6 +165,12 @@ function App() {
       alert('Swap transaction failed. See console for details.');
     }
   };
+
+    // Convert blockchain units (e.g. 10500000000) back to user-friendly format (e.g. 10.5000)
+  // This reverses the process done for input, dividing by token decimals
+  const formattedOutputAmount = simulationResult
+    ? (Number(simulationResult.minAskUnits) / getAssetInfo(toAsset).decimals).toFixed(4)
+    : '';
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 p-6">
@@ -271,9 +278,7 @@ function App() {
               </p>
               <span className="text-gray-500">→</span>
               <p className="text-md font-bold">
-                {(Number(simulationResult.minAskUnits) / getAssetInfo(toAsset).decimals).toFixed(
-                  getAssetInfo(toAsset).decimals === 1e9 ? 4 : 2
-                )}{' '}
+                {formattedOutputAmount}{' '}
                 {displaySymbol(toAsset)}
               </p>
             </div>
