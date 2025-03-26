@@ -22,7 +22,7 @@ For full instructions on how this project was built, please refer to our **[Swap
 
 If you want to dive straight into the core swap logic, take a look at:
 
-- **[`App.tsx`](./src/App.tsx)** — The main React component that implements the swap functionality.
+- **[`App.jsx`](./src/App.jsx)** — The main React component that implements the swap functionality.
 
 ---
 
@@ -30,7 +30,7 @@ If you want to dive straight into the core swap logic, take a look at:
 
 The most relevant files for the swap demo are:
 
-- **`src/App.tsx`**  
+- **`src/App.jsx`**  
   Contains the main UI and swap handling logic (wallet connection, asset selection, simulation, and transaction execution).
 
 - **`public/tonconnect-manifest.json`**  
@@ -78,7 +78,7 @@ If you prefer not to run the app locally, you can quickly preview or fork it on 
 4. Click the Run button to start the dev server.
 5. Use the Replit preview to interact with the swap UI.
 
-You can then modify any files (like App.tsx) directly in Replit and immediately see the changes reflected in the preview.
+You can then modify any files (like App.jsx) directly in Replit and immediately see the changes reflected in the preview.
 
 ---
 
