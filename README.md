@@ -49,7 +49,7 @@ The most relevant files for the swap demo are:
 1. **Clone the repository**:
 
 ```bash
-  git clone https://github.com/your-user/stonfi-swap-app.git
+  git clone https://github.com/mrruby/stonfi-swap-app.git
   cd stonfi-swap-app
 ```
 
